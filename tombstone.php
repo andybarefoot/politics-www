@@ -259,7 +259,7 @@ if($poster){
 	<td align="center" colspan="4">More "Make your own" posters:</td>
 	</tr>
 	<tr>
-	<td><a href="cameron.php"><img src="images/cameron-poster-button.jpg" /></a></td>
+	<td><a href="index.php"><img src="images/cameron-poster-button.jpg" /></a></td>
 	<td><a href="tucker.php"><img src="images/tucker-poster-button.jpg" /></a></td>
 <!--	<td><a href="tombstone.php"><img src="images/tombstone-poster-button.jpg" /></a></td> -->
 	<td><a href="twofaced.php"><img src="images/twofaced-poster-button.jpg" /></a></td>

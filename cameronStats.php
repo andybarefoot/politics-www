@@ -352,7 +352,7 @@ http://www.cssstickyfooter.com
 	<td><? print $cunt; ?>%</td>
 	</tr>
 	</table>
-	<h2>Back to the <a href="cameron.php">poster</a>.</h2>
+	<h2>Back to the <a href="index.php">poster</a>.</h2>
 	</div>
 </div>
 </div>

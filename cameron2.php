@@ -216,7 +216,7 @@ http://www.cssstickyfooter.com
 <?
 if($poster){
 ?>
-<strong>Direct link:</strong> http://www.andybarefoot.com/politics/cameron.php?poster=<? print $poster; ?> <strong>|| Post your generated poster to <a href="http://www.facebook.com/sharer.php?u=http://www.andybarefoot.com/politics/cameron.php?poster=<? print $poster; ?>&t=My own David Cameron poster" target="_blank">Facebook</a></strong><br /><form name="twitPicForm" action="twitPicUploader2.php" Method="POST" target="_blank"><strong>Post to Twitter - </strong> Username:<input id="nameField" type="text" name="username"> Password: <input id="passField" type="password" name="password"> Tweet: "[image link] - <input id="messField" type="text" name="message" value="My David Cameron poster" maxlength=80=> - made here http://bit.ly/7b4vAk"<input type="hidden" name="poster" value="<? print $poster; ?>"> <input type="submit" value="Tweet!"></form><br/>
+<strong>Direct link:</strong> http://www.andybarefoot.com/politics/index.php?poster=<? print $poster; ?> <strong>|| Post your generated poster to <a href="http://www.facebook.com/sharer.php?u=http://www.andybarefoot.com/politics/index.php?poster=<? print $poster; ?>&t=My own David Cameron poster" target="_blank">Facebook</a></strong><br /><form name="twitPicForm" action="twitPicUploader2.php" Method="POST" target="_blank"><strong>Post to Twitter - </strong> Username:<input id="nameField" type="text" name="username"> Password: <input id="passField" type="password" name="password"> Tweet: "[image link] - <input id="messField" type="text" name="message" value="My David Cameron poster" maxlength=80=> - made here http://bit.ly/7b4vAk"<input type="hidden" name="poster" value="<? print $poster; ?>"> <input type="submit" value="Tweet!"></form><br/>
 
 <?
 }
