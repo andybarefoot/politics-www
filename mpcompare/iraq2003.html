@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-us" ng-app="iraq2003">
+    <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<meta charset="utf-8" />
+		<title>Compare MPs - on their support for key policies</title>
+ 		<link rel="stylesheet" href="/css/reset.css">
+		<link rel="stylesheet" href="css/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+        <script src="//code.angularjs.org/1.3.0-rc.1/angular.min.js"></script>
+        <script src="jscript/iraq2003.js"></script>
+    </head>
+    <body>
+		<header>
+			<div>
+				<h1><a href="/politics/mpcompare">CoMParison</a></h1>		
+				<p>Compare MPs on their<br/>support for key policies.</p>
+			</div>
+		</header>
+		<div ng-controller="mainController">
+			<p class="intro">Iraq 2003: For the invasion.</p>
+			<p class="intro">This table shows the current MPs who voted on the policy for invading Iraq in 2003 and the percentage support they showed for the policy.</p>
+			<p class="intro">The data is provided by <a href="http://www.publicwhip.org.uk/" target="_blank">the Public Whip</a> and that website has more information on the individual votes that are included within the broader <a href="http://www.publicwhip.org.uk/policy.php?id=1049" target="_blank">policy</a> and how each MP's support is calculated.</p>
+			<p class="intro">If your current MP is not shown in the list below it is because they were not an MP at the time the Iraq Invasion was being discussed.</p>
+			<table>
+				<thead>
+					<tr>
+						<td class="firstCell">Search MPs: <input type="text" ng-model="mpSearch"></td>
+						<td class="firstCell">Support</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="iraqResult in iraqResults | filter:mpSearch" >
+						<td class=" more party {{ iraqResult.mpParty }}"><a ng-href="{{ mpPolicyLink(iraqResult.mpNameURL) }}" target="_blank">{{ iraqResult.mpName }} ({{ iraqResult.mpParty }}) - {{ iraqResult.mpConst }}</a></td>
+						<td ng-class-odd="'more moreOdd'" ng-class-even="'more moreEven'"><a ng-href="{{ mpPolicyLink(iraqResult.mpNameURL) }}" target="_blank" >{{ iraqResult.percentage }}%</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div><!-- social -->
+	</body>
+</html>
