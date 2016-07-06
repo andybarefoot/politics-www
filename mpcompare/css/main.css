@@ -1,0 +1,192 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, input {
+	color: #000;
+	background-color: #f8f5ef;
+	font-family: 'Merriweather', serif;
+}
+
+input {
+	font-size: 1em;
+}
+
+.close {
+	position: absolute;
+	top:5px;
+ 	right:5px;
+ 	font-size: 0.7em;
+ 	cursor: pointer;
+}
+header {
+	font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    font-stretch: normal;
+    font-size: 1.8em;
+    line-height: 1.16em;
+    font-family: 'Merriweather', serif;
+	color: #222;
+	background-color: #eaeaea;
+	height: 180px;
+	padding: 60px 5% 40px 5%;
+}
+
+h1 {
+	font-size: 2.5em;
+	float: left;
+	margin-top: 17px;
+	margin-right: 50px;
+}
+
+a {
+	color: #c3322f;
+	text-decoration: none;
+}
+
+.intro {
+	width: 90%;
+	margin: 40px auto 40px auto ;
+	padding: 0 20px 0 20px;
+}
+
+h2 {
+	margin: 40px auto 10px auto ;
+	padding: 0 20px 0 20px;
+}
+
+.spacer {
+	clear: both;
+	height: 1px;
+	width: 100%;
+}
+#more{
+	width: 90%;
+	margin: auto;
+}
+
+#key{
+	width: 90%;
+	margin: auto;
+}
+
+.more{
+	width: 100%;
+	padding: 10px 20px 10px 20px;
+ 	cursor: pointer;
+}
+
+.key{
+	width: 25%;
+	height: 50px;
+	padding: 10px 20px 10px 20px;
+	float: left;
+	background-color: #eaeaea;
+	cursor: pointer;
+}
+
+.dark {
+	background-color: #d5d5d5;
+}
+
+.odd {
+	background-color: #d5d5d5;
+}
+.even {
+	background-color: #eaeaea;
+}
+.moreOdd{
+	background-color: #d5d5d5;
+}
+
+.moreEven{
+	background-color: #eaeaea;
+}
+
+#moreMps{
+	width: 50%;
+	float: left;
+}
+
+#morePolicies{
+	width: 50%;
+	float: left;
+}
+
+#mpTitle {
+	color: #d50000;
+}
+
+table {
+	margin: auto;
+	margin-top: 40px;
+	width: 90%;	
+	background-color: #616161;
+}
+
+td {
+	padding: 20px;
+	margin: 2px;
+	text-align: center;
+    position: relative;
+}
+
+.firstCell {
+	text-align: left;
+	color: #222;
+	background-color: #eaeaea;
+}
+
+.firstCol {
+	text-align: left;
+}
+
+.Con {background:#0087dc; color: #fff;}
+.DUP {background:#d62b2d; color: #fff}
+.Green {background:#008066; color: #fff}
+.Independent {background:#ff00ff; color: #fff}
+.Lab {background:#d50000; color: #fff}
+.LDem {background:#FDBB30; color: #fff}
+.PC {background:#3F8428; color: #fff}
+.SDLP {background:#005a42; color: #fff}
+.SF {background:#02665f; color: #fff}
+.SNP {background:#FFF95D; color: #444}
+.Speaker {background:#333333; color: #fff}
+.UKIP {background:#B3009D; color: #fff}
+.UUP {background:#1d3160; color: #fff}
+
+.Con a {color: #fff;}
+.DUP a {color: #fff}
+.Green a {color: #fff}
+.Independent a {color: #fff}
+.Lab a {color: #fff}
+.LDem a {color: #fff}
+.PC a {color: #fff}
+.SDLP a {color: #fff}
+.SF a {color: #fff}
+.SNP a {color: #444}
+.Speaker a {color: #fff}
+.UKIP a {color: #fff}
+.UUP a {color: #fff}
+
+@media screen and (min-width: 600px){	
+}	
+
+@media screen and (min-width: 800px){	
+}	
+
+@media screen and (min-width: 1000px){	
+}
+
+@media screen and (min-width: 1400px){	
+}
+
+@media screen and (min-width: 1800px){	
+}
