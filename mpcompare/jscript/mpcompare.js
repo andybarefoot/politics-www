@@ -31,7 +31,7 @@ mpcompare.controller('mainController', ['$scope', '$filter', '$http', function (
 	$scope.polFilter = "";
 	$scope.polSearchText = "";
 	$scope.loadSupportPolicies = function () {
-		url = 'http://andybarefoot.sites.dev/politics/mpcompare/policyapi.php?mps=' + $scope.mps.toString() + '&policies=' + $scope.policies.toString();
+		url = '/politics/mpcompare/policyapi.php?mps=' + $scope.mps.toString() + '&policies=' + $scope.policies.toString();
 		console.log(url);
 		$http.get(url)
 			.success(function (result){
