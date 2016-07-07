@@ -3,6 +3,7 @@ var mpcompare = angular.module('mpcompare', []);
 mpcompare.controller('mainController', ['$scope', '$filter', '$http', '$location', function ($scope, $filter, $http, $location) {
 
 	$scope.mps = [];
+	$scope.mpsLeaders = [86, 119, 196, 511, 373, 93];
 	if($location.path()!=""){
 		if($location.path().split("/").length>=3){
 			console.log(1);
@@ -20,7 +21,6 @@ mpcompare.controller('mainController', ['$scope', '$filter', '$http', '$location
 		$scope.mps =  $scope.mpsLeaders.slice(0);
 		$scope.policies = [6685,1039,6711,1052,852,6686,1065,1049,984,1087,6673];
 	}
-	$scope.mpsLeaders = [86, 119, 196, 511, 373, 93];
 	$scope.mpsConLeaders = [354,209,236,124,396];
 	$scope.mpsLabLeaders = [119,77,118,336];
 	$scope.mpsBrexit = [86,465,119,320,236];
