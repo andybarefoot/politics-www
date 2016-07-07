@@ -10,10 +10,10 @@ $policiesCheck = explode(",", $policyStr);
 if($mpsCheck[0]=="")$mpStr="0";
 if($policiesCheck[0]=="")$policyStr="0";
 foreach($mpsCheck AS $mpCheck){
-	if(intval($mpCheck)!=$mpCheck)$mpStr="0";
+	if(!ctype_digit ($mpCheck))$mpStr="0";
 }
 foreach($policiesCheck AS $policyCheck){
-	if(intval($policyCheck)!=$policyCheck)$policyStr="0";
+	if(!ctype_digit ($policyCheck))$policyStr="0";
 }
 
 $sqlStmt="SELECT * FROM `mps` WHERE `mpID` IN (".$mpStr.") ORDER BY `mpID` ASC";

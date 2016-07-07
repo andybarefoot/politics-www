@@ -1,8 +1,25 @@
 var mpcompare = angular.module('mpcompare', []);
 
-mpcompare.controller('mainController', ['$scope', '$filter', '$http', function ($scope, $filter, $http) {
+mpcompare.controller('mainController', ['$scope', '$filter', '$http', '$location', function ($scope, $filter, $http, $location) {
+
 	$scope.mps = [];
-	$scope.policies = [6685,1039,6711,1052,852,6686,1065,1049,984,1087,6673];
+	if($location.path()!=""){
+		if($location.path().split("/").length>=3){
+			console.log(1);
+			$scope.mpsPath = $location.path().split("/")[1];
+			$scope.polsPath = $location.path().split("/")[2];
+			$scope.mps =  $scope.mpsPath.split(",");
+			$scope.policies =  $scope.polsPath.split(",");
+		}else{
+			console.log(2);
+			$scope.mps =  [];
+			$scope.policies = [];
+		}
+	}else{
+		console.log("no hash");
+		$scope.mps =  $scope.mpsLeaders.slice(0);
+		$scope.policies = [6685,1039,6711,1052,852,6686,1065,1049,984,1087,6673];
+	}
 	$scope.mpsLeaders = [86, 119, 196, 511, 373, 93];
 	$scope.mpsConLeaders = [354,209,236,124,396];
 	$scope.mpsLabLeaders = [119,77,118,336];
@@ -30,6 +47,8 @@ mpcompare.controller('mainController', ['$scope', '$filter', '$http', function (
 	$scope.mpFilterParty = "";
 	$scope.polFilter = "";
 	$scope.polSearchText = "";
+
+
 	$scope.loadSupportPolicies = function () {
 		url = '/politics/mpcompare/policyapi.php?mps=' + $scope.mps.toString() + '&policies=' + $scope.policies.toString();
 		console.log(url);
@@ -38,8 +57,9 @@ mpcompare.controller('mainController', ['$scope', '$filter', '$http', function (
 				console.log(result);
 				$scope.policyResults = result.policies;
 				$scope.mpDetails = result.mpNames;
-				$scope.moreMps = result.moreMps
-				$scope.morePolicies = result.morePolicies
+				$scope.moreMps = result.moreMps;
+				$scope.morePolicies = result.morePolicies;
+				$location.path('/' + $scope.mps.toString() + '/' + $scope.policies.toString());
 			})
 			.error(function (data,status){
 				console.log(data);
@@ -100,8 +120,6 @@ mpcompare.controller('mainController', ['$scope', '$filter', '$http', function (
 		$scope.loadSupportPolicies();
 	}
 
-
-	$scope.mps =  $scope.mpsLeaders.slice(0);
 	$scope.loadSupportPolicies();
 
 }]);
