@@ -118,11 +118,13 @@ h2 {
 #moreMps{
 	width: 50%;
 	float: left;
+	margin-bottom: 100px;
 }
 
 #morePolicies{
 	width: 50%;
 	float: left;
+	margin-bottom: 100px;
 }
 
 #mpTitle {
