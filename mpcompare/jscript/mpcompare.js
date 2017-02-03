@@ -3,7 +3,7 @@ var mpcompare = angular.module('mpcompare', []);
 mpcompare.controller('mainController', ['$scope', '$filter', '$http', '$location', function ($scope, $filter, $http, $location) {
 
 	$scope.mps = [];
-	$scope.mpsLeaders = [86, 119, 196, 511, 373, 93];
+	$scope.mpsLeaders = [396, 119, 196, 511, 373, 93];
 	if($location.path()!=""){
 		if($location.path().split("/").length>=3){
 			console.log(1);
